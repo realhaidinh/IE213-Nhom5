@@ -38,7 +38,7 @@ function ImageList() {
                   <b>{sight.name}</b> <br></br>
                   <img style={{height: "300px", width: "300px", marginTop:"15px"}} alt={sight.name} src={sight.image} />
                   <br></br>
-                  <a href="#top" >Quay về đầu trang</a>
+                  <a href="#sight-list" >Quay về đầu trang</a>
                 </div>
               </>
             );
@@ -50,7 +50,7 @@ function ImageList() {
 function SightList() {
   return (
     <>
-    <div id="top">
+    <div id="sight-list">
       <h1>DANH LAM THẮNG CẢNH</h1>
       <NameList/>
       <ImageList/>
