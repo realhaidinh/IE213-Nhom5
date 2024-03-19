@@ -5,18 +5,14 @@ import SightList from './components/SightList';
 import { useState } from 'react';
 const components = [<LearningResult/>, <SightList/>, <LearningTracking/>]
 function App() {
-  const [component, setComponent] = useState(components[0]);
   const [id, setID] = useState("0");
-  function handleSubmit(form) {
-    form.preventDefault();
-    setComponent(components[parseInt(id)]);
-  }
   function handleChange(e) {
     setID(e.target.value);
   }
+  const component = components[id];
   return (
     <div className="App">
-      <form style={{textAlign: "center"}} onSubmit={handleSubmit}>
+      <form style={{textAlign: "center"}}>
         <input 
           type="radio" 
           id="1" 
@@ -42,7 +38,7 @@ function App() {
         </input>
         <label htmlFor="3">Bài 4</label>
         <br></br>
-        <input type="submit" value="Xác nhận"></input>
+        
       </form>
       {component}
     </div>
